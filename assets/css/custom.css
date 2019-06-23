@@ -1,0 +1,110 @@
+body {
+  margin-top: 53px;
+}
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.social-link {
+  font-size: 11rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+.inner-nav {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.app-navbar {
+  font-size: 1.2rem;
+  background-color: white;
+}
+
+.navbar-brand {
+  width: 39%;
+}
+
+.navbar-toggler {
+  font-size: 2.25rem;
+  position: absolute;
+  right: 10px;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: black;
+  color: black;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (min-width: 375px) {
+  .app-navbar {
+    font-size: 1.45rem;
+  }
+}
+
+@media (min-width: 425px) {
+  body {
+    margin-top: 71px;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-navbar {
+    font-size: .8rem;
+  }
+
+  .navbar-nav {
+    position: relative;
+    right: -15%;
+  }
+
+  body {
+    margin-top: 91px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-navbar {
+    font-size: 1.15rem;
+  }
+
+  body {
+    margin-top: 128px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .app-navbar {
+    font-size: 1.4rem;
+  }
+
+  body {
+    margin-top: 192px;
+  }
+
+  .navbar-nav {
+    right: -29%;
+  }
+}
