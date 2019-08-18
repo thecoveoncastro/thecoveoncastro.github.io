@@ -44,7 +44,7 @@ a:hover {
 }
 
 .navbar-toggler {
-  font-size: 2.25rem;
+  font-size: 1.6rem;
   position: absolute;
   right: 10px;
 }
@@ -59,9 +59,15 @@ a:hover {
 }
 
 .gh-btn-wrapper {
+  display: none;
   margin-bottom: 1.25rem;
   margin-left: calc(50% - 95px);
   width: 190px;
+}
+
+.navbar .gh-btn-wrapper {
+  display: block;
+  margin-left: 0;
 }
 
 a {
@@ -77,9 +83,17 @@ a:hover {
   padding: 0;
 }
 
+.phone-wrapper {
+  margin-left: .625rem;
+}
+
 @media (min-width: 375px) {
   .app-navbar {
     font-size: 1.45rem;
+  }
+
+  .phone-wrapper {
+    margin-left: 0;
   }
 }
 
@@ -97,6 +111,14 @@ a:hover {
   .navbar-nav {
     position: relative;
     right: -15%;
+  }
+
+  .navbar .gh-btn-wrapper {
+    display: none;
+  }
+
+  .gh-btn-wrapper {
+    display: block;
   }
 
   body {
