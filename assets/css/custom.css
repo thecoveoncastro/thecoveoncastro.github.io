@@ -91,6 +91,10 @@ a:hover {
   margin-left: .625rem;
 }
 
+.phone {
+  color: black;
+}
+
 @media (min-width: 375px) {
   .app-navbar {
     font-size: 1.45rem;
