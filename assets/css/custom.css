@@ -92,7 +92,10 @@ a:hover {
 }
 
 .phone {
-  color: black;
+  background-color: black;
+  color: white;
+  margin: auto;
+  max-width: 217px;
 }
 
 @media (min-width: 375px) {
