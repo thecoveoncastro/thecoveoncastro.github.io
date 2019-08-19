@@ -9,6 +9,10 @@ body {
   width: 100%;  /* The width is the width of the web page */
 }
 
+.address-logo {
+  width: 50%;
+}
+
 .fixed-top {
   position: fixed;
   top: 0;
@@ -128,6 +132,11 @@ a:hover {
   .logo {
     width: 30%;
   }
+
+  .address-logo {
+    width: 25%;
+  }
+
 }
 
 @media (min-width: 1024px) {
