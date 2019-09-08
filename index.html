@@ -7,6 +7,12 @@
   <meta name="description" content="">
   <meta name="keywords" content="san francisco castro diner">
   <meta name="author" content="Yianna Kokalas">
+  <!-- the following meta tag is a quick fix for ios safari. it will turn off the 
+    telephone link detection thus turning of phone link  styling. It may be worth just using
+    the css in the examples if you want some other telephone features to work.
+
+    src: https://stackoverflow.com/questions/3736807/how-do-i-remove-the-blue-styling-of-telephone-numbers-on-iphone-ios
+  -->
   <meta name="format-detection" content="telephone=no">
 
   <title>
@@ -51,6 +57,9 @@
           </li>
           <li class="nav-item" data-link="reservationsContactLink">
             <a id="reservationsContactLink" class="nav-link" href="#location-hours">Reservations &amp; Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#aboutUs">About Us</a>
           </li>
         </ul>
       </div>
@@ -165,17 +174,44 @@
   </div>
 
   <div class="modals">
-    <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="aboutUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">About Us</h5>
+            <h5 class="modal-title">A Castro Landmark</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>jjj</p>
+            <p>
+            For more than 48 years, The Cove on Castro's delicious home-style meals have warmed 
+            hearts and stomachs for generations. With handmade soups and breads prepared fresh 
+            each day, the Cove is your welcome oasis on San Francisco's Castro Street for 
+            great food.
+            </p>
+            <p>
+            Whether it's just a cup of coffee or a three-course dinner with all the fixins, you'll 
+            feel relaxed and at home on our comfortable seating, including soft pillows on our 
+            banquettes, and ample tables that accommodate a group.
+            </p>
+            <p>We offer several daily specials and an array of vegetarian and gluten-free choices.</p>
+            <p>One very happy customer writes:</p>
+            <p>
+            “I have eaten at the Cove on Castro for years. The owners and staff treat customers like beloved relatives. They really look after their regulars and guests alike.  The owners have a huge heart I can't count the number of times I have witnessed care packages being sent to regulars who may be under the weather. You can't say that for many dining establishments in the city.  The food is great, not your typical greasy Castro street diner.  My favorite meals are breakfast and lunch.  The homemade soups are wonderful and breakfast is always tasty. The food, service and kindness get my vote.  Thanks to Solange and her wonderful husband for the great food and compassion you have shown in the past to your clients.”
+            </p>
+            <p>
+            With a staff that's always friendly and caring, Castro neighborhood locals have relied on The Cove for years, eating one or more meals here every day. The Cove always has fun new twists on its specials board and discounts for early eaters!
+            </p>
+            <p>
+            The Cove is a great place to come before or after a show at the historic Castro Theatre, right across the street. We have our own productions, too, showing gay, historic and just plain fun videos of customers, fans, visitors and the people who make the Castro the Castro. Bring in your own photos and video and share your story!
+            </p>
+            <p>
+            The owners Maurice and Solange not only support the LGBTQ community, they provide one of the only places you can simply sit with a coffee, beer or wine to watch the Castro neighborhood go by in all its wonderful diversity. 
+            </p>
+            <p>
+            Great food and good people. You can't say you were in the Castro without coming in and saying hi!
+            </p>
           </div>
         </div>
       </div>
