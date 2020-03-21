@@ -1,5 +1,5 @@
 body {
-  margin-top: 6rem;
+  margin-top: 19vw;
 }
 
 /* Always set the map height explicitly to define the size of the div
@@ -99,6 +99,7 @@ a:hover {
 }
 
 .covid-banner {
+  cursor: pointer;
   width: 100%;
 }
 
@@ -136,15 +137,13 @@ a:hover {
 
 @media (min-width: 575px) {
   body {
-    margin-top: 4rem;
+    margin-top: 10vw;
   }
 
   .jumbotron {
     padding: 0;
   }
-}
 
-@media (min-width: 768px) {
   .app-navbar {
     font-size: .8rem;
   }
@@ -172,13 +171,25 @@ a:hover {
 
 }
 
+@media (min-width: 576px) {
+  body {
+    margin-top: 15vw;
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    margin-top: 10vw;
+  }
+}
+
 @media (min-width: 1024px) {
   .app-navbar {
     font-size: 1.15rem;
   }
 
   body {
-    margin-top: 5rem;
+    margin-top: 7vw;
   }
 
   .social-link {
