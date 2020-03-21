@@ -1,5 +1,5 @@
 body {
-  margin-top: 13rem;
+  margin-top: 6rem;
 }
 
 /* Always set the map height explicitly to define the size of the div
@@ -70,7 +70,7 @@ a:hover {
 }
 
 .navbar .gh-btn-wrapper {
-  display: block;
+  // display: block;
   margin-left: 0;
 }
 
@@ -102,13 +102,26 @@ a:hover {
   width: 100%;
 }
 
-main .covid-banner {
-  display: none;
+.covid-banner .covid-ribbon {
+  display: block;
+  font-weight: 300;
+  left: 0;
+  text-align: center;
+}
+
+.covid-ribbon em {
+  color: white;
+  text-decoration: underline;
 }
 
 .jumbotron {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.app-myphone-brand,
+.menu {
+  display: none;
 }
 
 @media (min-width: 375px) {
@@ -121,24 +134,9 @@ main .covid-banner {
   }
 }
 
-@media (min-width: 425px) {
-  body {
-    margin-top: 11rem;
-  }
-}
-
 @media (min-width: 575px) {
   body {
     margin-top: 4rem;
-  }
-
-  .covid-banner {
-    display: none;
-  }
-
-  main .covid-banner {
-    display: block;
-    padding-top: .625rem;
   }
 
   .jumbotron {
@@ -161,7 +159,7 @@ main .covid-banner {
   }
 
   .gh-btn-wrapper {
-    display: block;
+    // display: block;
   }
 
   .logo {
