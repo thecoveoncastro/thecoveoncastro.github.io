@@ -84,7 +84,7 @@ a:hover {
 
 .app-block-footer {
   background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-  padding: 0;
+  bottom: 0;
 }
 
 .phone-wrapper {
@@ -178,7 +178,7 @@ a:hover {
   }
 
   body {
-    margin-top: 128px;
+    margin-top: 5rem;
   }
 
   .social-link {
@@ -201,7 +201,7 @@ a:hover {
   }
 
   body {
-    margin-top: 192px;
+    margin-top: 8rem;
   }
 
   .navbar-nav {
@@ -209,3 +209,9 @@ a:hover {
   }
 }
 
+@media (min-width: 2560px) {
+  .app-block-footer {
+    position: fixed;
+    padding: 0;
+  }
+}
