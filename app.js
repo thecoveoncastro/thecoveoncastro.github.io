@@ -1,7 +1,6 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const app = express();
-const port = 3000;
 
 nunjucks.configure('views', {
       autoescape: true,
@@ -13,4 +12,9 @@ app.get('/', function(req, res) {
 });
 
 app.use(express.static('public'));
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
+app.listen(port);
