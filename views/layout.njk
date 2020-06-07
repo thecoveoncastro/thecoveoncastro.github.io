@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="san francisco castro diner">
+  <meta name="author" content="Yianna Kokalas">
+  <!-- the following meta tag is a quick fix for ios safari. it will turn off the 
+    telephone link detection thus turning of phone link  styling. It may be worth just using
+    the css in the examples if you want some other telephone features to work.
+
+    src: https://stackoverflow.com/questions/3736807/how-do-i-remove-the-blue-styling-of-telephone-numbers-on-iphone-ios
+  -->
+  <meta name="format-detection" content="telephone=no">
+
+  <title>
+    The Cove on Castro
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+  <link href="./assets/css/toolkit-minimal.css" rel="stylesheet">
+  <link href="./assets/css/application-minimal.css" rel="stylesheet">
+  <link href="./assets/css/custom.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160002198-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160002198-1');
+  </script>
+</head>
+<body>
+
+  <nav class="navbar navbar-light navbar-expand-sm text-uppercase app-navbar fixed-top pt-2">
+    <div class="inner-nav row">
+      <a class="navbar-brand col-2 mr-0" href="#">
+        <span><img alt="cove logo" class="img-fluid logo" src="./assets/img/cove-logo.png"></span>
+      </a>
+
+      <div class="gh-btn-wrapper">
+        <div class="gh-button-ifrm" data-customer-id="716298" data-restaurant-name="The Cove on Castro"
+            data-button-type="branded" data-button-color="red" data-button-size="large" data-env="prod"
+            data-url="the-cove-on-castro-4 34-castro-st-san-francisco" data-tracking-id="62509"
+            data-restaurant-address="434 Castro St, San Francisco CA, 94114"
+            data-version="1.0" data-link-type="gh">
+        </div>
+      </div> 
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav">
+          {% block navItems %}
+            <li class="nav-item" data-link="menuLink">
+              <a id="menuLink" class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item" data-link="locationHoursLink">
+              <a id="locationHoursLink" class="nav-link" href="#location-hours">Location &amp; Hours</a>
+            </li>
+            <li class="nav-item" data-link="reservationsContactLink">
+              <a id="reservationsContactLink" class="nav-link" href="#location-hours">Reservations &amp; Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#aboutUs" href="#foo">About Us</a>
+            </li>
+          {% endblock %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    {% block main %}
+
+    {% endblock %}
+  </main>
+
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/toolkit.js"></script>
+  <script src="./assets/js/application.js"></script>
+  <script>
+    function activateBreakfastButton() {
+      document.getElementById("breakfast").classList.add("active")
+    }
+
+    function activateLunchButton() {
+      document.getElementById("lunch").classList.add("active")
+    }
+
+    function activateDinnerButton() {
+      document.getElementById("dinner").classList.add("active")
+    }
+
+    function initMap() {
+      var cove = {lat: 37.7619, lng: -122.4353};
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: cove,
+        zoom: 19
+      });
+      var marker = new google.maps.Marker({position: cove, map: map});
+    }
+
+    function deactivateButtons() {
+      document.getElementsByClassName("breakfast")[0].classList.remove("active");
+      document.getElementsByClassName("lunch")[0].classList.remove("active");
+      document.getElementsByClassName("dinner")[0].classList.remove("active");
+    }
+    var map;
+
+    // execute/clear BS loaders for docs
+    $(function(){
+			while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()};
+			$('.carousel').carousel({
+				interval: false
+			})
+      var menuOptions = {
+        wrap: false,
+        interval: false
+      }
+      $('.breakfast').click(function() {
+        deactivateButtons();
+        activateBreakfastButton();
+			  $('.carousel').carousel(0, menuOptions);
+      });
+
+      $('.lunch').click(function() {
+        deactivateButtons();
+        activateLunchButton();
+			  $('.carousel').carousel(1, menuOptions);
+      });
+
+      $('.dinner').click(function() {
+        deactivateButtons();
+        activateDinnerButton();
+			  $('.carousel').carousel(2, menuOptions);
+      });
+		})
+
+  </script>
+
+  <script src="https://gh-prod-nitrosites.s3.amazonaws.com/scripts/iframeLib.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSYwRYz8lzLIuZ2Ozau348AXIPSkG7_G8&callback=initMap" async defer>
+  </script>
+
+</body>
+</html>
+
+

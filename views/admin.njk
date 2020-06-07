@@ -1,0 +1,20 @@
+{% extends "layout.njk" %}
+
+{% block navItems %}
+{% endblock %}
+
+{% block main %}
+  <form class="login-form" action="/login" method="post">
+    <div class="w-100">
+      <label name="email">Email</label>
+      <input type="email"></input>
+    </div>
+
+    <div class="w-100">
+      <label name="password">Password</label>
+      <input type="password"></input>
+    </div>
+
+    <button class="btn btn-primary">submit</button>
+  </form>
+{% endblock %}
