@@ -97,6 +97,10 @@
       document.getElementById("dinner").classList.add("active")
     }
 
+    function activateBeveragesButton() {
+      document.getElementById("beverages").classList.add("active")
+    }
+
     function initMap() {
       var cove = {lat: 37.7619, lng: -122.4353};
       map = new google.maps.Map(document.getElementById('map'), {
@@ -139,6 +143,12 @@
         deactivateButtons();
         activateDinnerButton();
 			  $('.carousel').carousel(2, menuOptions);
+      });
+
+      $('.beverages').click(function() {
+        deactivateButtons();
+        activateBeveragesButton();
+			  $('.carousel').carousel(3, menuOptions);
       });
 		})
 

@@ -120,11 +120,6 @@ a:hover {
   padding-bottom: 0;
 }
 
-.app-myphone-brand,
-.menu {
-  display: none;
-}
-
 @media (min-width: 375px) {
   .app-navbar {
     font-size: 1.45rem;
